@@ -1,4 +1,13 @@
+// duckyPad duckyScript Standard Library
+// For Details, see:
+// https://github.com/duckyPad/DPDS-Standard-Library
 
+REM_BLOCK
+    Author: dekuNukem
+    Description:
+    Args:
+    Returns:
+END_REM
 FUN WAITKEY(key_id)
     WHILE 1
         VAR pressed = _BLOCKING_READKEY
