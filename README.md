@@ -75,3 +75,8 @@ Contributions welcome!
 * Or post in discord
 * Include a brief description in the comment, along with author credit (name, social media handle, email, etc).
 
+## Ideas
+
+print time?
+release all keys?
+memcpy?

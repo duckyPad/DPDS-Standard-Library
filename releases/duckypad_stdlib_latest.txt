@@ -1,22 +1,44 @@
 // duckyPad duckyScript Standard Library
-// For Details, see:
 // https://github.com/duckyPad/DPDS-Standard-Library
 
+// --------------------
 REM_BLOCK
-    Author: dekuNukem
+    Author:
+        dekuNukem
     Description:
+        Waits for a specific key to be pressed
+        Any other keypresses are ignored
     Args:
+        key_id: The ID of the key to wait for (1-20 for keys, etc).
     Returns:
+        None
+    Additional notes:
+        None
 END_REM
 FUN WAITKEY(key_id)
+    BCLR
     WHILE 1
-        VAR pressed = _BLOCKING_READKEY
-        IF pressed == key_id
-            RETURN 1
+        IF _BLOCKING_READKEY == key_id
+            RETURN
         END_IF
     END_WHILE
 END_FUN
 
+// --------------------
+REM_BLOCK
+    Author:
+        dekuNukem
+    Description:
+        Fills a block of memory with byte value
+    Args:
+        addr: Starting address
+        value: Byte value (0-255) to write.
+        length: Number of bytes to write.
+    Returns:
+        None
+    Additional notes:
+        Address should be within scratch memory
+END_REM
 FUN MEMSET(addr, value, length)
     VAR i = 0
     WHILE i < length
@@ -25,6 +47,19 @@ FUN MEMSET(addr, value, length)
     END_WHILE
 END_FUN
 
+// --------------------
+REM_BLOCK
+    Author:
+        dekuNukem
+    Description:
+        Returns the absolute (positive) value of a number.
+    Args:
+        n: The input integer.
+    Returns:
+        The absolute value of n.
+    Additional notes:
+        Works with both math modes
+END_REM
 FUN ABS(n)
     IF _UNSIGNED_MATH == 1
         RETURN n
@@ -37,6 +72,20 @@ FUN ABS(n)
     RETURN n
 END_FUN
 
+// --------------------
+REM_BLOCK
+    Author:
+        dekuNukem
+    Description:
+        Returns the smaller of two numbers.
+    Args:
+        a: First number
+        b: Second number
+    Returns:
+        The smaller value between a and b.
+    Additional notes:
+        Result is affected by the current _UNSIGNED_MATH mode.
+END_REM
 FUN MIN(a, b)
     IF a < b
         RETURN a
@@ -44,6 +93,20 @@ FUN MIN(a, b)
     RETURN b
 END_FUN
 
+// --------------------
+REM_BLOCK
+    Author:
+        dekuNukem
+    Description:
+        Returns the larger of two numbers.
+    Args:
+        a: First number
+        b: Second number
+    Returns:
+        The larger value between a and b.
+    Additional notes:
+        Result is affected by the current _UNSIGNED_MATH mode.
+END_REM
 FUN MAX(a, b)
     IF a > b
         RETURN a
