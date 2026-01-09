@@ -33,6 +33,8 @@ Therefore, please **read and follow** the guides below to ensure safety and comp
 
 * Functions should be **helpful** and **not overly niche**.
 
+* Function name should be in **ALL UPPER CASE**
+
 * **DO NOT** use **persistent global variables** (`_GV0` - `_GV31`)
 
 * **DO NOT** use **hard-coded memory address**
