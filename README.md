@@ -12,6 +12,19 @@ This is part of [Jan 2026 Update Beta test](https://github.com/dekuNukem/duckyPa
 * To include, add `USE_STDLIB` to your script. 
 	* This line will be **replaced AS-IS** with the [latest StdLib source](./releases/duckypad_stdlib_latest.txt).
 
+## Table of Contents
+
+- [STDLIB Functions](#stdlib-functions)
+    - [`WAITKEY(key_id)`](#waitkeykey_id)
+    - [`MAX(a, b)`](#maxa-b)
+    - [`MIN(a, b)`](#mina-b)
+    - [`ABS(n)`](#absn)
+    - [`MEMSET(addr, value, length)`](#memsetaddr-value-length)
+    - [`MEMCPY(dest, src, n)`](#memcpydest-src-n)
+- [Contribution Guidelines](#contribution-guidelines)
+- [How to Contribute](#how-to-contribute)
+- [Questions or Comments?](#questions-or-comments)
+
 ## STDLIB Functions
 
 ### `WAITKEY(key_id)`
@@ -138,3 +151,7 @@ Contributions welcome!
 print time?
 release all keys?
 memcpy?
+
+## Questions or Comments?
+
+Please feel free to [open an issue](https://github.com/duckyPad/DPDS-Standard-Library/issues), ask in the [official duckyPad discord](https://discord.gg/4sJCBx5), or email `dekuNukem`@`gmail`.`com`!
