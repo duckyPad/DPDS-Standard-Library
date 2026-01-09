@@ -12,13 +12,69 @@ This is part of [Jan 2026 Update Beta test](https://github.com/dekuNukem/duckyPa
 * To include, add `USE_STDLIB` to your script. 
 	* This line will be **replaced AS-IS** with the [latest StdLib source](./releases/duckypad_stdlib_latest.txt).
 
-## Function Docs
+## STDLIB Functions
 
-TBD
+### `WAITKEY(key_id)`
+
+Wait until a specific key is pressed
+
+| | |
+| :---: | :---: |
+| **Args**  | `key_id`: Key to wait for<br>See [Key ID section](https://dekunukem.github.io/duckyPad-Pro/doc/duckyscript_info.html#key-id)|
+| **Returns**  | None  |
+
+### `MAX(a, b)`
+
+Returns the larger of two numbers
+
+| | |
+| :---: | :---: |
+| **Args**  | `a`, `b`: Numbers|
+| **Returns**  | The larger value between `a` and `b` |
+| **Notes** | Result affected by the current `_UNSIGNED_MATH` mode |
+
+### `MIN(a, b)`
+
+Returns the smaller of two numbers
+
+| | |
+| :---: | :---: |
+| **Args**  | `a`, `b`: Numbers|
+| **Returns**  | The smaller value between `a` and `b` |
+| **Notes** | Result affected by the current `_UNSIGNED_MATH` mode |
+
+### `ABS(n)`
+
+Returns the absolute value of a number.
+
+| | |
+| :---: | :---: |
+| **Args**  | `n`: Input number|
+| **Returns**  | Absolute value of `n` |
+
+### `MEMSET(addr, value, length)`
+
+Fill block of memory
+
+| | |
+| :---: | :---: |
+| **Args**  |`addr`: Starting address<br>`value`: Byte value (0-255) to write.<br>`length`: Number of bytes to write.|
+| **Returns**  | None |
+| **Notes** | For use in scratch memory region<br> |
+
+### `MEMCPY(dest, src, n)`
+
+Copy memory
+
+| | |
+| :---: | :---: |
+| **Args**  |`dest`: Destination memory address<br>`src`: Source memory address<br>`n`: Number of bytes to copy|
+| **Returns**  | None |
+| **Notes** | For use in scratch memory region<br>Do not overlap|
 
 ## Contribution Guidelines
 
-When in use, the StdLib source is added **as-is** to user scripts during preprocessing.
+When in use, the StdLib source is added **AS-IS** to user scripts **during preprocessing**.
 
 Therefore, please **read and follow** the guides below to ensure safety and compatibility.
 

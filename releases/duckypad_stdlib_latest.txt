@@ -1,22 +1,6 @@
 // duckyPad duckyScript Standard Library
 // https://github.com/duckyPad/DPDS-Standard-Library
 
-// Comment Template:
-// --------------------
-REM_BLOCK
-    Author:
-        dekuNukem
-    Description:
-        What does it do, how to use.
-    Args:
-        If any
-    Returns:
-        If any
-    Additional Notes:
-        If any
-END_REM
-// define func here
-
 // --------------------
 REM_BLOCK
     Author:
@@ -45,22 +29,20 @@ REM_BLOCK
     Author:
         dekuNukem
     Description:
-        Fills a block of memory with byte value
+        Returns the larger of two numbers.
     Args:
-        addr: Starting address
-        value: Byte value (0-255) to write.
-        length: Number of bytes to write.
+        a: First number
+        b: Second number
     Returns:
-        None
+        The larger value between a and b.
     Additional Notes:
-        Address should be within scratch memory
+        Result is affected by the current _UNSIGNED_MATH mode.
 END_REM
-FUN MEMSET(addr, value, length)
-    VAR i = 0
-    WHILE i < length
-        POKE8(addr + i, value)
-        i = i + 1
-    END_WHILE
+FUN MAX(a, b)
+    IF a > b
+        RETURN a
+    END_IF
+    RETURN b
 END_FUN
 
 // --------------------
@@ -89,27 +71,6 @@ REM_BLOCK
     Author:
         dekuNukem
     Description:
-        Returns the larger of two numbers.
-    Args:
-        a: First number
-        b: Second number
-    Returns:
-        The larger value between a and b.
-    Additional Notes:
-        Result is affected by the current _UNSIGNED_MATH mode.
-END_REM
-FUN MAX(a, b)
-    IF a > b
-        RETURN a
-    END_IF
-    RETURN b
-END_FUN
-
-// --------------------
-REM_BLOCK
-    Author:
-        dekuNukem
-    Description:
         Returns the absolute (positive) value of a number.
     Args:
         n: The input integer.
@@ -128,6 +89,29 @@ FUN ABS(n)
     END_IF
     
     RETURN n
+END_FUN
+
+// --------------------
+REM_BLOCK
+    Author:
+        dekuNukem
+    Description:
+        Fills a block of memory with byte value
+    Args:
+        addr: Starting address
+        value: Byte value (0-255) to write.
+        length: Number of bytes to write.
+    Returns:
+        None
+    Additional Notes:
+        Address should be within scratch memory
+END_REM
+FUN MEMSET(addr, value, length)
+    VAR i = 0
+    WHILE i < length
+        POKE8(addr + i, value)
+        i = i + 1
+    END_WHILE
 END_FUN
 
 // --------------------
