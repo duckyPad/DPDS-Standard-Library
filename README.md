@@ -1,6 +1,6 @@
-# duckyPad duckyScript Standard Library
+# duckyPad Standard Library
 
-DPDS StdLib provides **handy helper functions** to make duckyScript coding easier.
+DP StdLib provides **handy helper functions** to make duckyScript coding easier.
 
 ## ⚠️ Under construction!
 
@@ -10,7 +10,7 @@ This is part of [Jan 2026 Update Beta test](https://github.com/dekuNukem/duckyPa
 
 * Use latest configurator and firmware
 * To include, add `USE_STDLIB` to your script. 
-	* This line will be **replaced AS-IS** with the [latest StdLib source](./releases/duckypad_stdlib_latest.txt).
+	* That line will be **replaced AS-IS** with the [latest StdLib source](./releases/duckypad_stdlib_latest.txt).
 
 ## Table of Contents
 
@@ -25,7 +25,7 @@ This is part of [Jan 2026 Update Beta test](https://github.com/dekuNukem/duckyPa
 - [How to Contribute](#how-to-contribute)
 - [Questions or Comments?](#questions-or-comments)
 
-## STDLIB Functions
+## StdLib Functions
 
 ### `WAITKEY(key_id)`
 
