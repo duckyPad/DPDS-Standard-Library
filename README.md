@@ -36,6 +36,16 @@ Wait until a specific key is pressed
 | **Args**  | `key_id`: Key to wait for<br>See [Key ID section](https://dekunukem.github.io/duckyPad-Pro/doc/duckyscript_info.html#key-id)|
 | **Returns**  | None  |
 
+### `WAIT_NOKEY()`
+
+Wait until **all keys are released**
+
+| | |
+| :---: | :---: |
+| **Args**  | None|
+| **Returns**  | None |
+| **Notes** | Useful for ensuring nothing is pressed before checking for inputs |
+
 ### `MAX(a, b)`
 
 Returns the larger of two numbers

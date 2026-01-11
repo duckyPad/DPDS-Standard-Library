@@ -16,11 +16,27 @@ REM_BLOCK
         None
 END_REM
 FUN WAITKEY(key_id)
-    BCLR
-    WHILE 1
-        IF _BLOCKING_READKEY == key_id
-            RETURN
-        END_IF
+    WHILE _BLOCKING_READKEY != key_id
+        DELAY 0
+    END_WHILE
+END_FUN
+
+// --------------------
+REM_BLOCK
+    Author:
+        dekuNukem
+    Description:
+        Blocks until all keys are released.
+    Args:
+        None
+    Returns:
+        None
+    Additional Notes:
+        Useful for ensuring nothing is pressed before start checking for inputs
+END_REM
+FUN WAIT_NOKEY()
+    WHILE _SW_BITFIELD
+        DELAY 0
     END_WHILE
 END_FUN
 
