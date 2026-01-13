@@ -93,17 +93,12 @@ REM_BLOCK
     Returns:
         The absolute value of n.
     Additional Notes:
-        Works with both math modes
+        None
 END_REM
 FUN ABS(n)
-    IF _UNSIGNED_MATH == 1
-        RETURN n
-    END_IF
-    
     IF n < 0
         RETURN n * -1
-    END_IF
-    
+    END_IF 
     RETURN n
 END_FUN
 
@@ -148,7 +143,7 @@ END_REM
 FUN MEMCPY(dest, src, n)
     VAR i = 0
     WHILE i < n
-        POKE8(dest + i, PEEK8(src + i))
+        POKE8(dest + i, PEEKU8(src + i))
         i += 1
     END_WHILE
 END_FUN

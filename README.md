@@ -126,8 +126,6 @@ Therefore, please **read and follow** the guides below to ensure safety and comp
 
 * If your function **modifies reserved variables** (e.g. [anything `RW` in this list](https://github.com/dekuNukem/duckyPad-Pro/blob/dsvm2/doc/duckyscript_info.md#reserved-variables-list)), you **MUST** save the original value and **restore** it before returning.
 
-* Beware of **current math mode** affecting math results! If needed, save `_UNSIGNED_MATH` state, set new mode, perform ops, and restore before return.
-
 * Ensure **all keys are released** before function exit.
 	* E.g. no orphan `KEYDOWN`s.
 
@@ -152,15 +150,14 @@ Therefore, please **read and follow** the guides below to ensure safety and comp
 Contributions welcome!
 
 * [Read the guidelines](#contribution-guidelines)
-* Pull request
-* Or post in discord
+* Submit a pull request
+* [Or post in Discord](https://discord.gg/4sJCBx5)
 * Include a brief description in the comment, along with author credit (name, social media handle, email, etc).
 
 ## Ideas
 
-print time?
-release all keys?
-memcpy?
+Print time?
+Release all keys?
 
 ## Questions or Comments?
 
