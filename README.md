@@ -2,10 +2,6 @@
 
 DP StdLib provides **handy helper functions** to make duckyScript coding easier.
 
-## ⚠️ Under construction!
-
-This is part of [Jan 2026 Update Beta test](https://github.com/dekuNukem/duckyPad-Pro/blob/dsvm2/doc/beta_test.md)
-
 ## Usage
 
 * Use latest configurator and firmware
@@ -103,7 +99,7 @@ Therefore, please **read and follow** the guides below to ensure safety and comp
 
 #### Useful Info
 
-* [duckyScript Reference Manual](https://github.com/dekuNukem/duckyPad-Pro/blob/dsvm2/doc/duckyscript_info.md#reserved-variables-list)
+* [duckyScript Reference Manual](https://github.com/dekuNukem/duckyPad-Pro/blob/master/doc/duckyscript_info.md#reserved-variables-list)
 * [duckStack Virtual Machine](https://github.com/duckyPad/DuckStack)
 
 #### Code Structure
@@ -124,7 +120,7 @@ Therefore, please **read and follow** the guides below to ensure safety and comp
 
 #### State Management
 
-* If your function **modifies reserved variables** (e.g. [anything `RW` in this list](https://github.com/dekuNukem/duckyPad-Pro/blob/dsvm2/doc/duckyscript_info.md#reserved-variables-list)), you **MUST** save the original value and **restore** it before returning.
+* If your function **modifies reserved variables** (e.g. [anything `RW` in this list](https://github.com/dekuNukem/duckyPad-Pro/blob/master/doc/duckyscript_info.md#reserved-variables-list)), you **MUST** save the original value and **restore** it before returning.
 
 * Beware of **current math mode** affecting math results! If needed, save `_UNSIGNED_MATH` state, set new mode, perform ops, and restore before return.
 
